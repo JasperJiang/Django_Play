@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for article in articles %}
+        <a href="#"><h3>{{article.title}}</h3></a>
+        <a href="#"><h5>{{article.content}}</h5></a>
+    {% endfor %}
+    <a href="#">添加新的文章</a>
+</body>
+</html>

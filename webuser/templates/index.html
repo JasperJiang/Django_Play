@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='myApp'>
+<head>
+	<meta charset="UTF-8">
+	<script src="/static/js/jquery.min.js"></script>
+	<script src="/static/js/materialize.min.js"></script>
+	<script src="/static/js/angular.min.js"></script>
+	<script src="/static/js/index.js"></script>
+	<link rel="stylesheet" href="/static/css/index.css">
+	<link rel="stylesheet" href="/static/css/materialize.min.css">
+	<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon" />
+	<title>杰克雪莉酒|故事就在身边</title>
+</head>
+<body class="row" ng-controller="mainController">
+	<div>
+		<div class="col l12 m12 s12 right-align">
+			<nav class="z-depth-2">
+				<div class="nav-wrapper">
+					<ul class="hide-on-med-and-down right">
+						<li><a href="#">生活</a></li>
+						<li><a href="#">职场</a></li>
+						<li><a href="#">情感</a></li>
+						<li><a href="#">科技</a></li>
+						<li><a href="#">宠物</a></li>
+						<li><a href="#" class="waves-effect waves-light btn-large">退出登录</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+		<div class="blue lighten-4 col l12 m12 s12 left-align" id="galary">画廊，热门帖子精选
+			<div class="col l4 m6 s8 push-l8 push-m6 push-s4 blue lighten-3" id="login">登录框</div>
+		</div>
+	</div>
+		<div class="pink lighten-4 col l8 m10 s12 offset-l2" id="article">
+			<div class="article_list card small col l5 m5 s5 offset-l1 offset-m1 offset-s1 " ng-repeat="article in articles">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="head_image activator" src="/static/images/sample-1.jpg" height="100%">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">{[{article.author}]}</span>
+					<p class="text-grey">{[{article.time}]}</p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">{[{article.author}]}</span>
+					<p>{[{article.content}]}</p>
+				</div>
+			</div>
+		</div>
+		<div class="pink lighten-2 col l2 m2 hide-on-small-only" id="author">热门作者列表</div>
+	</div>
+	<div class="orange lighten-1 center-align col l12 m12 s12 footer-copyright"><div class="container">杰克雪莉酒|故事就在身边</div></div>
+</body>
+</html>
